@@ -113,6 +113,32 @@
   margin-left: 0.5rem;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form input {
+  height: 30px;
+  margin: 10px 0px;
+  font-size: 20px;
+  padding: 5px 10px;
+}
+
+.form input[type="submit"] {
+  width: 50%;
+  margin: 10px auto;
+  background-color: black;
+  color: white;
+  border: none;
+}
+.form textarea {
+  resize: none;
+  padding: 5px 10px;
+  font-size: 20px;
+  height: 200px;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
