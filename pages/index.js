@@ -21,14 +21,23 @@ export default function Home() {
         <div className={styles.grid}>
           <form
             data-netlify="true"
+            netlify-honeypot="bot-field"
             method="POST"
             name="contact"
             className={styles.form}
           >
+            <p hidden>
+              <label>
+                Don’t fill this out if you’re human: <input name="bot-field" />
+              </label>
+            </p>
             <input type="hidden" name="form-name" value="contact" />
-            <input type="text" placeholder="Arsalan" />
-            <input type="email" placeholder="me@khattak.dev" />
-            <textarea placeholder="Your Message comes here"></textarea>
+            <input name="name" type="text" placeholder="Arsalan" />
+            <input name="email" type="email" placeholder="me@khattak.dev" />
+            <textarea
+              name="message"
+              placeholder="Your Message comes here"
+            ></textarea>
             <input type="submit" value="Send!" />
           </form>
         </div>
